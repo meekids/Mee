@@ -1,78 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blackboard</title>
+    <meta charset="UTF-8">
+    <title>User Information Form</title>
     <style>
+      /* CSS box properties */
       body {
-        margin: 0;
-        padding: 0;
-        background-color: black;
+        background-color: #f2f2f2;
       }
-      
-      #blackboard {
-        height: 100vh;
-        width: 100vw;
-        background-color: white;
+      .form-container {
+        width: 500px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       }
-      
-      #colors {
-        height: 50px;
-        width: 100vw;
-        position: absolute;
-        bottom: 0;
-        display: flex;
-        justify-content: center;
+      input[type=text], input[type=number] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
       }
-      
-      .color {
-        height: 30px;
-        width: 30px;
-        margin: 10px;
-        border-radius: 50%;
+      input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
         cursor: pointer;
+        float: right;
       }
-      
-      #color1 {
-        background-color: red;
-      }
-      
-      #color2 {
-        background-color: orange;
-      }
-      
-      #color3 {
-        background-color: yellow;
-      }
-      
-      #color4 {
-        background-color: green;
-      }
-      
-      #color5 {
-        background-color: blue;
-      }
-      
-      #color6 {
-        background-color: purple;
-      }
-      
-      #color7 {
-        background-color: pink;
+      input[type=submit]:hover {
+        background-color: #45a049;
       }
     </style>
   </head>
-  
   <body>
-    <div id="blackboard"></div>
-    <div id="colors">
-      <div class="color" id="color1"></div>
-      <div class="color" id="color2"></div>
-      <div class="color" id="color3"></div>
-      <div class="color" id="color4"></div>
-      <div class="color" id="color5"></div>
-      <div class="color" id="color6"></div>
-      <div class="color" id="color7"></div>
+    <div class="form-container">
+      <h2>User Information Form</h2>
+      <form action="store_data.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Enter your age" required>
+        <input type="submit" value="Submit">
+      </form>
     </div>
   </body>
 </html>
+
+
+
+
+
+
+
 
